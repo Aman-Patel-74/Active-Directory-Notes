@@ -1,5 +1,4 @@
 # Active-Directory-Notes
-# Active Directory Notes
 
 A collection of personal notes on offensive Active Directory security — enumeration, lateral movement, credential attacks, Kerberos abuse, and common tooling. Written while learning and practicing in a lab environment.
 
