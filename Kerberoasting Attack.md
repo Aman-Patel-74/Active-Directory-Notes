@@ -1,8 +1,8 @@
-# ⚔️ Kerberoasting Attack — Lab Setup & LDAP Enumeration
+ ⚔️ Kerberoasting Attack — Lab Setup & LDAP Enumeration
 
 > Offensive-Active-Directory / Kerberos-Enumeration / Kerberoasting-Attack
 
-> **Note:** This note currently covers the *lab setup* and *LDAP-based SPN enumeration* portion of the Kerberoasting Attack page. Send over the remaining screenshots (attack execution, hash cracking, detection/mitigation) whenever you have them and this file can be extended.
+> **Note:** This note currently covers the _lab setup_ and _LDAP-based SPN enumeration_ portion of the Kerberoasting Attack page. Send over the remaining screenshots (attack execution, hash cracking, detection/mitigation) whenever you have them and this file can be extended.
 
 ---
 
@@ -19,7 +19,7 @@ New-ADUser -Name "Kerbe-roast" `
   -AccountPassword $PASSWORD
 
 Set-ADUser -Identity Kerbe-roast `
-  -ServicePrincipalNames @{Add="HTTP/dc01.infosecwarrior.local"}
+  -ServicePrincipalNames @{Add="HTTP/dc01.aman.local.local"}
 ```
 
 ---
@@ -29,7 +29,7 @@ Set-ADUser -Identity Kerbe-roast `
 Use `ldapsearch` to query Active Directory and extract SPNs.
 
 ```bash
-ldapsearch -x -H ldap://192.168.2.100 -D '' -w '' -b 'DC=infosecwarrior,DC=local' > ldapsearch-output.txt
+ldapsearch -x -H ldap://192.168.2.100 -D '' -w '' -b 'DC=aman.local,DC=local' > ldapsearch-output.txt
 ```
 
 ### Extract `servicePrincipalName`
